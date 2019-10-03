@@ -1,0 +1,32 @@
+{
+  "name": "nodeFaculdade",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "@sap/hana-client": "^2.4.155",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "gridfs": "^1.0.0",
+    "gridfs-stream": "^1.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "momentjs": "^2.0.0",
+    "mongodb": "^3.3.2",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^3.3.0",
+    "promisify": "^0.0.3",
+    "sequelize": "^5.18.4",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "hdb": "^0.17.1",
+    "mongoose": "^5.7.1",
+    "nodemon": "^1.19.2",
+    "sequelize-cli": "^5.5.1",
+    "sucrase": "^3.10.1"
+  }
+}
