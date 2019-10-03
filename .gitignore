@@ -1,0 +1,4 @@
+node_modules
+/src/config/hanadb
+/src/config/mongodb
+copy
