@@ -9,7 +9,6 @@ export default {
   async store(req, res) {
     const codigo = req.body.cod_aluno || req.body.cod_professor;
     const senha = req.body.senha;
-    console.log(req.body);
     if (req.body.cod_aluno) {
       const aluno = await Aluno.findOne({ cod_aluno: codigo });
 

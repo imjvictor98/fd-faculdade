@@ -6,6 +6,8 @@ export default {
   async store(req, res) {
     const { originalname: name, filename: path } = req.file;
 
+    console.log("REQUEST: ", req.file);
+
     if (req.alunoToken) {
       const aluno = await Aluno.findOneAndUpdate(
         {

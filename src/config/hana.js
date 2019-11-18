@@ -1,11 +1,16 @@
+require("dotenv/config");
 import hanaClient from "@sap/hana-client";
+
 const params = {
-  host: "192.168.1.49",
+  host: process.env.HANA_HOST,
   port: 31115,
-  uid: "S0020896385",
-  pwd: "First@01"
+  uid: process.env.HANA_ID,
+  pwd: process.env.HANA_PWD
 };
 
 const connection = hanaClient.createConnection();
 
-export default { connection, params };
+export default {
+  connection,
+  params
+};

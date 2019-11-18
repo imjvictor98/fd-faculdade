@@ -4,18 +4,19 @@ const Schema = mongoose.Schema;
 const File = new Schema(
   {
     name: String,
-    path: String,
-    url: {
-      type: String,
-      get() {
-        return `http://localhost:3333/files/${this.path}`;
-      }
-    }
+    path: String
   },
   {
-    strict: false,
-    id: false
+    id: false,
+    toJSON: {
+      virtuals: true
+    }
   }
 );
 
+File.virtual("file_url").get(function() {
+  return `http://localhost:3333/files/${this.path}`;
+});
+
+export const FileSchema = File;
 export default mongoose.model("File", File, "file");

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { FileSchema } from "../models/File";
 
 const Schema = mongoose.Schema;
 
@@ -36,7 +37,8 @@ const Professor = new Schema({
       cidade: {
         type: String
       }
-    }
+    },
+    foto: FileSchema
   }
 });
 
